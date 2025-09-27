@@ -1,0 +1,130 @@
+/* .contact-page {
+  text-align: center;
+  padding: 40px;
+}
+
+.contact-page h2 {
+  font-size: 28px;
+  color: #8b0000;
+  margin-bottom: 10px;
+}
+
+.contact-page p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.phone-btn {
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(45deg, #25d366, #128c7e);
+} */
+
+.contact-page {
+  text-align: center;
+  padding: 40px;
+  animation: pageFadeIn 1s ease-in-out; /* 🔥 Page entry animation */
+}
+
+/* Headline */
+.contact-page h2 {
+  font-size: 28px;
+  color: #8b0000;
+  margin-bottom: 10px;
+  animation: fadeIn 1.2s ease-in-out; /* 🔥 Same as About page heading */
+}
+
+/* Paragraph */
+.contact-page p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 30px;
+  animation: fadeUp 1.5s ease-in-out; /* 🔥 Slide in like About page text */
+}
+
+/* Actions (buttons) */
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeUp 1.8s ease-in-out; /* 🔥 Buttons appear last */
+}
+
+/* Buttons */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.phone-btn {
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(45deg, #25d366, #128c7e);
+}
+
+/* 🔥 Animations reused from About Page */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔥 Extra: whole page fade */
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

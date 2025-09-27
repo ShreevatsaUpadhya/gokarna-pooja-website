@@ -1,0 +1,104 @@
+.hero {
+  min-height: 100vh;
+  background: var(--hero-bg) no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
+/* Headline with blur animation */
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f1c40f;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 1;
+  animation: fadeInAndBlur 3s ease forwards; /* new animation */
+}
+
+/* Description */
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  max-width: 700px;
+  line-height: 1.6;
+  color: #f8f9fa;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 2s ease;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* New animation: fade in then blur */
+@keyframes fadeInAndBlur {
+  0% {
+    opacity: 0;
+    filter: blur(10px); /* start blurred */
+    transform: translateY(-20px);
+  }
+  30% {
+    opacity: 1;
+    filter: blur(0); /* sharp text */
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(3px); /* gradually blur */
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .hero {
+    padding: 0 15px;
+  }
+
+  .hero p {
+    padding: 10px 15px;
+    border-radius: 8px;
+  }
+}

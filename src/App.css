@@ -1,0 +1,71 @@
+/* Base App styles */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  transition: height 0.3s ease; /* smooth resize on smaller screens */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Base body and root */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #000; /* match your theme */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .App-logo {
+    height: 30vmin;
+  }
+  .App-header {
+    font-size: calc(9px + 2.5vmin);
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .App-logo {
+    height: 25vmin;
+  }
+  .App-header {
+    font-size: calc(8px + 3vmin);
+  }
+}

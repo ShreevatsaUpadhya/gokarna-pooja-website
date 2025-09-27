@@ -1,0 +1,148 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #8e2430;
+  color: #fff;
+  padding: 6px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 60px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   Sidebar Menu (Mobile)
+========================= */
+.navbar-right {
+  position: fixed;
+  top: 0;
+  right: -260px;       /* hidden initially */
+  width: 260px;        /* panel width */
+  height: 100vh;
+  background: #8e2430;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  gap: 20px;
+  transition: right 0.3s ease;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 200;
+}
+
+.navbar-right.active {
+  right: 0;            /* slide in */
+}
+
+.navbar-right a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+  color: #ffcc00;
+}
+
+/* Close button inside sidebar */
+.navbar-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+
+/* =========================
+   Hamburger Menu
+========================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+}
+
+/* =========================
+   Overlay
+========================= */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* =========================
+   Mobile Styles
+========================= */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* =========================
+   Desktop Styles
+========================= */
+@media (min-width: 769px) {
+  .navbar-right {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .navbar-right a {
+    margin: 0 10px;
+    font-size: 1rem;
+    padding: 0;
+    width: auto;
+    text-align: center;
+  }
+
+  .hamburger,
+  .navbar-close,
+  .overlay {
+    display: none !important;
+  }
+}

@@ -1,0 +1,79 @@
+.sarpa-dosha-page {
+  min-height: 100vh;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #fff8e7, #fde2b8);
+  color: #4a3c2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sarpa-dosha-heading {
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #d35400;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  white-space: nowrap; /* prevent line break */
+  overflow-x: auto;  
+}
+
+.sarpa-dosha-intro {
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 850px;
+}
+
+.sarpa-dosha-content {
+  max-width: 900px;
+  text-align: left;
+  line-height: 1.8;
+  font-size: clamp(0.95rem, 2.6vw, 1.05rem);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.sarpa-dosha-list {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.sarpa-dosha-item {
+  margin-bottom: 20px;
+}
+
+.sarpa-dosha-item h3 {
+  font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+  color: #e67e22; /* saffron highlight */
+  margin-bottom: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ Mobile adjustments */
+@media (max-width: 600px) {
+  .sarpa-dosha-page {
+    padding: 40px 20px;
+    text-align: left; /* better readability on mobile */
+  }
+
+  .sarpa-dosha-heading {
+    margin-bottom: 18px;
+  }
+
+  .sarpa-dosha-intro {
+    margin-bottom: 30px;
+  }
+
+  .sarpa-dosha-list {
+    padding-left: 15px;
+  }
+
+  .sarpa-dosha-item {
+    margin-bottom: 15px;
+  }
+}

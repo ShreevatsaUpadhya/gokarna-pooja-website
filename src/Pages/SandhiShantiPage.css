@@ -1,0 +1,77 @@
+.sandhi-page {
+  min-height: 100vh;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #fff8e7, #fde2b8);
+  color: #4a3c2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sandhi-heading {
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #d35400;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.sandhi-intro {
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 850px;
+}
+
+.sandhi-shanti-content {
+  max-width: 900px;
+  text-align: left;
+  line-height: 1.8;
+  font-size: clamp(0.95rem, 2.6vw, 1.05rem);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.sandhi-list {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.sandhi-item {
+  margin-bottom: 20px;
+}
+
+.sandhi-item h3 {
+  font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+  color: #e67e22; /* saffron highlight */
+  margin-bottom: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ Mobile-specific tweaks */
+@media (max-width: 600px) {
+  .sandhi-page {
+    padding: 40px 20px;
+    text-align: left; /* easier to read on small screens */
+  }
+
+  .sandhi-heading {
+    margin-bottom: 18px;
+  }
+
+  .sandhi-intro {
+    margin-bottom: 30px;
+  }
+
+  .sandhi-list {
+    padding-left: 15px;
+  }
+
+  .sandhi-item {
+    margin-bottom: 15px;
+  }
+}
