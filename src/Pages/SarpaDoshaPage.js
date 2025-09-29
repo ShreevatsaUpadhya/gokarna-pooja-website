@@ -13,8 +13,7 @@ const SarpaDoshaPage = () => {
       <div className="sarpa-dosha-content">
         <h2 className="sarpa-dosha-heading">🕉 Sarpa Dosha Parihaara</h2>
         <p className="sarpa-dosha-intro">
-          Sandhi Shanti poojas are performed during critical planetary
-          transitions to remove obstacles, reduce doshas, and bring peace.
+          Sarpa Dosha Parihara is a ritual remedy performed to appease serpent deities and remove the ill effects of Sarpa Dosha. It helps overcome obstacles in marriage, health, and progeny, bringing peace and balance in life.
         </p>
 
         <ul className="sarpa-dosha-list">
