@@ -32,7 +32,6 @@
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
   position: relative;
   z-index: 1;
-  animation: fadeInAndBlur 3s ease forwards; /* new animation */
 }
 
 /* Description */

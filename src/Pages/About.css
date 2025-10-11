@@ -23,7 +23,8 @@
 .divider {
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #c59d5f, transparent);
+  background: linear-gradient(90deg, #c59d5f);
+  animation: fadeIn 1.2s ease-in-out;
   margin: 15px auto 40px;
   border-radius: 2px;
 }
