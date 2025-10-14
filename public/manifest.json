@@ -1,25 +1,33 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Gokarna Seva Kaarya",
+  "name": "Gokarna Seva Kaarya | Temple Pooja & Seva Services in Gokarna",
+  "description": "Book authentic Hindu poojas and temple rituals in Gokarna, Karnataka. Perform Kaala Sarpa Shanti, Narayana Bali, Rudrabhisheka, and more with trusted priests.",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "gseva-favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "gokarna-apple-touch-icon.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "sizes": "192x192"
+      "purpose": "any maskable"
     },
     {
-      "src": "logo512.png",
+      "src": "gokarna-apple-touch-icon.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "512x512"
+      "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait",
+  "theme_color": "#f4b400",
+  "background_color": "#fff8e1",
+  "categories": ["religion", "spirituality", "temple", "pooja", "services"],
+  "lang": "en-IN",
+  "dir": "ltr"
 }
