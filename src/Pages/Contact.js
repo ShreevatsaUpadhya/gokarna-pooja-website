@@ -1,92 +1,61 @@
 import "./Contact.css";
 import React from "react";
-import { FaPhoneAlt } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
+import { Helmet } from "react-helmet";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 function Contact() {
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   phone: "",
-  //   message: "",
-  // });
-
-  // const [errors, setErrors] = useState({});
-  // const [formMessage, setFormMessage] = useState(null);
-
-  // const validate = () => {
-  //   let newErrors = {};
-
-  //   // Name
-  //   if (!formData.name.trim()) {
-  //     newErrors.name = "Name is required.";
-  //   } else if (formData.name.length < 3) {
-  //     newErrors.name = "Name should be at least 3 characters.";
-  //   }
-
-  //   // Email
-  //   if (!formData.email.trim()) {
-  //     newErrors.email = "Email is required.";
-  //   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-  //     newErrors.email = "Enter a valid email address.";
-  //   }
-
-  //   // Phone
-  //   if (!formData.phone.trim()) {
-  //     newErrors.phone = "Phone number is required.";
-  //   } else if (!/^\d{10}$/.test(formData.phone)) {
-  //     newErrors.phone = "Enter a valid 10-digit phone number.";
-  //   }
-
-  //   // Message
-  //   if (!formData.message.trim()) {
-  //     newErrors.message = "Message cannot be empty.";
-  //   }
-
-  //   return newErrors;
-  // };
-
-  // const handleChange = (e) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  //   setErrors({ ...errors, [e.target.name]: "" }); // clear error when typing
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const newErrors = validate();
-  //   if (Object.keys(newErrors).length > 0) {
-  //     setErrors(newErrors);
-  //     return;
-  //   }
-
-  //   try {
-  //     const res = await fetch("http://localhost:5000/api/bookings", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(formData),
-  //     });
-
-  //     const data = await res.json();
-
-  //     if (data.success) {
-  //       setFormMessage("Booking submitted successfully!");
-  //       setFormData({ name: "", email: "", phone: "", message: "" });
-  //       setTimeout(() => setFormMessage(null), 3000);
-  //     } else {
-  //       setFormMessage("Something went wrong. Try again.");
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //     setFormMessage("Server error. Please try later.");
-  //   }
-  // };
-
   return (
     <div className="contact-page">
-      <h2>📞 Contact Us</h2>
+      {/* ✅ SEO Metadata for Contact Page */}
+      <Helmet>
+        <title>Contact Gokarna Seva Kaarya | Book Pooja & Temple Rituals in Gokarna</title>
+        <meta
+          name="description"
+          content="Get in touch with Gokarna Seva Kaarya to book temple poojas, homas, and rituals in Gokarna, Karnataka. Call or WhatsApp us for Narayana Bali, Kaala Sarpa Shanti, Rudrabhisheka, and more."
+        />
+        <meta
+          name="keywords"
+          content="contact gokarna pooja, Gokarna Seva Kaarya contact, book pooja Gokarna, temple seva contact, purohit Gokarna phone number, Narayana Bali booking"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Contact Gokarna Seva Kaarya | Pooja & Seva Bookings" />
+        <meta
+          property="og:description"
+          content="Book Hindu poojas in Gokarna including Kaala Sarpa Shanti, Narayana Bali, Rudrabhisheka, and Pitru rituals. Call or WhatsApp for assistance."
+        />
+        <meta property="og:url" content="https://www.gokarnapoojas.in/contact" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://www.gokarnapoojas.in/contact" />
+
+        {/* ✅ Schema.org for Contact Page */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "ContactPage",
+              "mainEntity": {
+                "@type": "Organization",
+                "name": "Gokarna Seva Kaarya",
+                "url": "https://www.gokarnapoojas.in",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-9110893433",
+                  "contactType": "Customer Service",
+                  "areaServed": "IN",
+                  "availableLanguage": "English, Kannada"
+                }
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+
+      {/* ✅ Page Content */}
+      <h1>📞 Contact Us</h1>
       <p>
-        We are here to help you with all pooja bookings and seva services at Gokarna.
+        We are here to assist you with all{" "}
+        <strong>pooja bookings</strong> and{" "}
+        <strong>seva services</strong> in Gokarna.
       </p>
 
       <div className="contact-actions">
@@ -100,54 +69,9 @@ function Contact() {
           rel="noopener noreferrer"
           className="contact-btn whatsapp-btn"
         >
-         <FaWhatsapp size={20} /> WhatsApp
+          <FaWhatsapp size={20} /> WhatsApp
         </a>
       </div>
-    {/* <div className="contact-form">
-        <h3>Book a Pooja</h3>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          {errors.name && <p className="error-text">{errors.name}</p>}
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          {errors.email && <p className="error-text">{errors.email}</p>}
-
-          <input
-            type="text"
-            name="phone"
-            placeholder="Your Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-          {errors.phone && <p className="error-text">{errors.phone}</p>}
-
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows="4"
-            value={formData.message}
-            onChange={handleChange}
-          />
-          {errors.message && <p className="error-text">{errors.message}</p>}
-
-          <button type="submit">Submit</button>
-        </form>
-
-        {formMessage && <div className="success-text">{formMessage}</div>}
-      </div> */}
-   
     </div>
   );
 }
