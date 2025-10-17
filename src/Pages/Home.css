@@ -1,6 +1,6 @@
 .hero {
   min-height: 100vh;
-  background: var(--hero-bg) no-repeat center center/cover;
+  background: var(--hero-bg) no-repeat center center / cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +9,12 @@
   color: white;
   padding: 0 20px;
   position: relative;
-  overflow: hidden;
+  /* Removed overflow hidden for scroll stability */
+  overflow: visible;
+  /* Added transform isolation for mobile GPU issues */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Subtle overlay for readability */
@@ -18,11 +23,13 @@
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(2px);
+  /* Replace backdrop-filter blur for performance */
+  /* Old: backdrop-filter: blur(2px); */
+  background-blend-mode: multiply;
   z-index: 0;
 }
 
-/* Headline with blur animation */
+/* Headline */
 .hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
@@ -32,6 +39,7 @@
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
   position: relative;
   z-index: 1;
+  animation: fadeInDown 1.5s ease both;
 }
 
 /* Description */
@@ -45,7 +53,9 @@
   border-radius: 10px;
   position: relative;
   z-index: 1;
-  animation: fadeInUp 2s ease;
+  animation: fadeInUp 1.8s ease both;
+  /* Prevent re-layout during animation */
+  will-change: opacity, transform;
 }
 
 /* Animations */
@@ -71,33 +81,27 @@
   }
 }
 
-/* New animation: fade in then blur */
-@keyframes fadeInAndBlur {
-  0% {
-    opacity: 0;
-    filter: blur(10px); /* start blurred */
-    transform: translateY(-20px);
-  }
-  30% {
-    opacity: 1;
-    filter: blur(0); /* sharp text */
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(3px); /* gradually blur */
-    transform: translateY(0);
-  }
-}
-
 /* Mobile Adjustments */
 @media (max-width: 600px) {
   .hero {
     padding: 0 15px;
+    text-align: center;
   }
 
   .hero p {
     padding: 10px 15px;
     border-radius: 8px;
+  }
+}
+
+@supports not (backdrop-filter: blur(2px)) {
+  .hero::before {
+    backdrop-filter: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero::before {
+    backdrop-filter: none; /* disables blur on mobile */
   }
 }
