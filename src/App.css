@@ -1,12 +1,22 @@
-/* Base App styles */
+
+/* 🔥 HARD STOP horizontal scroll everywhere */
+html, body {
+  width: 100%;
+  overflow-x: hidden !important;
+}
+/* =========================
+   BASE APP STYLES
+========================= */
+
 .App {
   text-align: center;
 }
 
+/* CRA demo logo (safe to keep) */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  transition: height 0.3s ease; /* smooth resize on smaller screens */
+  transition: height 0.3s ease;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,6 +25,7 @@
   }
 }
 
+/* Demo header (kept safe, not harmful) */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -41,30 +52,43 @@
   }
 }
 
-/* Base body and root */
-body, html, #root {
+/* =========================
+   GLOBAL SAFETY RESET
+========================= */
+
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
-  height: 100%;
-  background: #000; /* match your theme */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;   /* 🔥 MOST IMPORTANT FIX */
   font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff; /* 🔥 FIX: remove black background */
 }
 
-/* Tablet styles */
+/* =========================
+   RESPONSIVE TWEAKS
+========================= */
+
+/* Tablet */
 @media (max-width: 768px) {
   .App-logo {
     height: 30vmin;
   }
+
   .App-header {
     font-size: calc(9px + 2.5vmin);
   }
 }
 
-/* Mobile styles */
+/* Mobile */
 @media (max-width: 480px) {
   .App-logo {
     height: 25vmin;
   }
+
   .App-header {
     font-size: calc(8px + 3vmin);
   }

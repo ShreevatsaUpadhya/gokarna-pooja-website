@@ -1,3 +1,7 @@
+/* ===========================
+   HERO SECTION
+=========================== */
+
 .hero {
   min-height: 100vh;
   background: var(--hero-bg) no-repeat center center / cover;
@@ -9,27 +13,24 @@
   color: white;
   padding: 0 20px;
   position: relative;
-  /* Removed overflow hidden for scroll stability */
-  overflow: visible;
-  /* Added transform isolation for mobile GPU issues */
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
-/* Subtle overlay for readability */
+/* ===========================
+   OVERLAY
+=========================== */
+
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  /* Replace backdrop-filter blur for performance */
-  /* Old: backdrop-filter: blur(2px); */
-  background-blend-mode: multiply;
+  background: rgba(0, 0, 0, 0.45);
   z-index: 0;
 }
 
-/* Headline */
+/* ===========================
+   HEADLINE
+=========================== */
+
 .hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
@@ -42,23 +43,120 @@
   animation: fadeInDown 1.5s ease both;
 }
 
-/* Description */
+/* ===========================
+   DESCRIPTION
+=========================== */
+
 .hero p {
   font-size: clamp(1rem, 2.5vw, 1.3rem);
-  max-width: 700px;
+  max-width: 720px;
   line-height: 1.6;
   color: #f8f9fa;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 14px 22px;
   border-radius: 10px;
   position: relative;
   z-index: 1;
   animation: fadeInUp 1.8s ease both;
-  /* Prevent re-layout during animation */
-  will-change: opacity, transform;
 }
 
-/* Animations */
+/* ===========================
+   HERO ACTION BUTTONS
+=========================== */
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 25px;
+  z-index: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.call-btn,
+.whatsapp-btn {
+  text-decoration: none;
+  padding: 14px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  min-width: 220px;
+  text-align: center;
+}
+
+.call-btn {
+  background: #f1c40f;
+  color: #000;
+  box-shadow: 0 6px 15px rgba(241, 196, 15, 0.4);
+}
+
+.call-btn:hover {
+  background: #ffdd33;
+  transform: translateY(-2px);
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   TOP POOJAS SECTION
+=========================== */
+
+.top-poojas {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.top-poojas h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2c2c2c;
+  font-weight: 700;
+}
+
+.pooja-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto 25px;
+}
+
+.pooja-list span {
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(241, 196, 15, 0.15),
+    rgba(0, 0, 0, 0.05)
+  );
+  color: #333;
+  font-weight: 600;
+  border: 1px solid rgba(241, 196, 15, 0.5);
+  font-size: 0.95rem;
+}
+
+.pooja-note {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -81,27 +179,87 @@
   }
 }
 
-/* Mobile Adjustments */
-@media (max-width: 600px) {
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
   .hero {
     padding: 0 15px;
-    text-align: center;
+  }
+
+  .call-btn,
+  .whatsapp-btn {
+    width: 100%;
+    max-width: 280px;
   }
 
   .hero p {
-    padding: 10px 15px;
+    padding: 12px 16px;
     border-radius: 8px;
   }
 }
 
-@supports not (backdrop-filter: blur(2px)) {
-  .hero::before {
-    backdrop-filter: none;
+@media (max-width: 600px) {
+  .top-poojas {
+    padding: 45px 15px;
   }
+
+  .top-poojas h2 {
+    font-size: 1.6rem;
+  }
+
+  .pooja-list span {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}
+/* =========================
+   STICKY CONTACT BAR (HOME)
+========================= */
+
+.sticky-contact-bar {
+  display: none;
 }
 
 @media (max-width: 768px) {
-  .hero::before {
-    backdrop-filter: none; /* disables blur on mobile */
+  .sticky-contact-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+    background: #ffffff;
+    border-top: 1px solid #ddd;
+  }
+
+  .sticky-btn {
+    flex: 1;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .sticky-btn.call {
+    background: #f1c40f;
+    color: #000;
+  }
+
+  .sticky-btn.whatsapp {
+    background: #25d366;
+    color: #fff;
+  }
+
+  /* prevent content hiding behind sticky bar */
+  .home {
+    padding-bottom: 60px;
   }
 }
+

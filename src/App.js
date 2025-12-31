@@ -1,26 +1,34 @@
 import React from "react";
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom"; 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer"
-import routes from "./routes";
+import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import routes from "./routes";
 import About from "./Pages/About";
 
 
-
-function App(){
-  return(
+function App() {
+  return (
     <Router>
+      {/* Scroll resets on navigation */}
       <ScrollToTop />
-      <Navbar/>
+
+      {/* Common header */}
+      <Navbar />
+
+      {/* Main routes */}
       <Routes>
-      {routes.map((r,i)=>(
-        <Route key={i} path={r.path} element={r.element}/>
-        
-      ))}
-      <Route path="/about" element={<About />} />
+        {/* Routes from routes.js (Home, Poojas, Contact, etc.) */}
+        {routes.map((r, i) => (
+          <Route key={i} path={r.path} element={r.element} />
+        ))}
+
+        {/* Explicit About route */}
+        <Route path="/about" element={<About />} />
       </Routes>
-       <Footer />
+
+      {/* Common footer */}
+      <Footer />
     </Router>
   );
 }

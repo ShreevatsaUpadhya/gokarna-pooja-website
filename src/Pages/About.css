@@ -4,18 +4,17 @@
   background: #ffffff;
   color: #333;
   text-align: center;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* Prevent mobile zoom/jitter */
-  will-change: transform, opacity;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
-/* Title */
+/* ===========================
+   TITLE
+=========================== */
+
 .about-page h1 {
   font-size: 3rem;
   margin-bottom: 10px;
@@ -26,7 +25,10 @@
   animation: fadeInText 1.2s ease-in-out both;
 }
 
-/* Divider */
+/* ===========================
+   DIVIDER
+=========================== */
+
 .divider {
   width: 100px;
   height: 4px;
@@ -36,40 +38,63 @@
   animation: fadeInBar 1.2s ease-in-out both;
 }
 
-/* Paragraphs */
+/* ===========================
+   PARAGRAPHS
+=========================== */
+
 .about-page p {
   font-size: 1.2rem;
   line-height: 1.8;
   max-width: 850px;
   margin: 20px auto;
   color: #444;
-  animation: fadeUp 1.2s ease-out both;
-
-  /* Prevent flicker on mobile scroll */
-  will-change: opacity, transform;
 }
 
 .about-page p strong {
   color: #c59d5f;
 }
 
-/* Keyframes */
+/* ===========================
+   CTA LINE
+=========================== */
+
+.about-cta {
+  margin-top: 30px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
 @keyframes fadeInText {
-  0% { opacity: 0; transform: translateY(-10px); }
-  100% { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInBar {
-  0% { opacity: 0; transform: scaleX(0.6); }
-  100% { opacity: 1; transform: scaleX(1); }
+  from {
+    opacity: 0;
+    transform: scaleX(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
+/* ===========================
+   TABLET
+=========================== */
 
-/* Tablet adjustments */
 @media (max-width: 768px) {
   .about-page {
     padding: 40px 15px;
@@ -85,7 +110,10 @@
   }
 }
 
-/* Mobile adjustments */
+/* ===========================
+   MOBILE
+=========================== */
+
 @media (max-width: 480px) {
   .about-page {
     padding: 30px 10px;

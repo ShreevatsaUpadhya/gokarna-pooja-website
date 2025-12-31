@@ -5,79 +5,49 @@ import "./About.css";
 function About() {
   return (
     <div className="about-page">
-      {/* ✅ SEO Metadata for About Page */}
       <Helmet>
-        <title>About Gokarna Seva Kaarya | Trusted Purohits & Temple Services in Gokarna</title>
+        <title>
+          About Gokarna Seva Kaarya | Authentic Pooja Services in Gokarna
+        </title>
         <meta
           name="description"
-          content="Gokarna Seva Kaarya offers authentic Hindu pooja services in Gokarna including Narayana Bali, Kaala Sarpa Shanti, Pitru Pooja, and temple sevas. Learn about our mission and trusted purohits."
+          content="Gokarna Seva Kaarya helps devotees perform authentic Hindu poojas and temple rituals in Gokarna, including Narayana Bali, Pitru Pooja, and Apara Karma, with proper guidance and arrangements."
         />
-        <meta
-          name="keywords"
-          content="about Gokarna Seva Kaarya, Gokarna pooja services, purohit in Gokarna, Narayana Bali, Kaala Sarpa Shanti, temple rituals, Gokarna priests, Hindu poojas"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="About Gokarna Seva Kaarya | Authentic Temple Pooja Services" />
-        <meta
-          property="og:description"
-          content="Learn about Gokarna Seva Kaarya — dedicated to performing authentic Hindu poojas and temple rituals with trusted priests in Gokarna, Karnataka."
-        />
-        <meta property="og:url" content="https://www.gokarnapoojas.in/about" />
-        <meta property="og:type" content="website" />
         <link rel="canonical" href="https://www.gokarnapoojas.in/about" />
-
-        {/* ✅ Structured Data for Organization */}
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Gokarna Seva Kaarya",
-              "url": "https://www.gokarnapoojas.in",
-              "logo": "https://www.gokarnapoojas.in/logo.png",
-              "sameAs": [
-                "https://www.gokarnapoojas.in"
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-9110893433",
-                "contactType": "Customer Service",
-                "areaServed": "IN",
-                "availableLanguage": ["English", "Kannada"]
-              },
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Kotiteertha Road, Near Venkatramana Temple",
-                "addressLocality": "Gokarna",
-                "addressRegion": "Karnataka",
-                "postalCode": "581326",
-                "addressCountry": "IN"
-              },
-              "description": "Gokarna Seva Kaarya provides authentic Hindu poojas and temple rituals performed by trusted priests in Gokarna, Karnataka."
-            }
-          `}
-        </script>
       </Helmet>
 
-      {/* ✅ Page Content */}
-      <h1>About Us</h1>
+      {/* Page Content */}
+      <h1>About Gokarna Seva Kaarya</h1>
       <div className="divider"></div>
 
       <p>
-        Welcome to <strong>Gokarna Seva Kaarya</strong>. We are dedicated to providing
-        <strong> authentic </strong> and traditional pooja services in Gokarna, helping
-        devotees perform rituals with devotion and ease.
+        <strong>Gokarna Seva Kaarya</strong> is a devotional service initiative created
+        to assist devotees in performing traditional Hindu poojas and temple rituals
+        in the sacred kshetra of <strong>Gokarna</strong>.
       </p>
 
       <p>
-        Our mission is to assist devotees in deepening their{" "}
-        <strong>spiritual connection</strong> — whether for personal, family, or ancestral
-        rituals performed in the holy town of Gokarna.
+        We help devotees with arrangements and guidance for important rituals such as{" "}
+        <strong>
+          Narayana Bali, Pitru Pooja, Apara Karma, Rudrabhisheka, and other temple sevas
+        </strong>{" "}
+        as per established traditions followed in Gokarna.
       </p>
 
       <p>
-        With trusted priests and a <strong>deep-rooted tradition</strong>, we ensure that
-        every pooja and seva is conducted with sincerity, faith, and respect for sacred customs.
+        Our focus is to ensure that devotees can perform these rituals peacefully,
+        with clarity about the procedure, requirements, and temple customs —
+        especially for families visiting Gokarna from outside.
+      </p>
+
+      <p>
+        Every pooja is carried out with respect for tradition, sincerity, and adherence
+        to the spiritual significance of Gokarna as a revered pilgrimage destination.
+      </p>
+
+      <p className="about-cta">
+        📞 For pooja details and arrangements, please feel free to{" "}
+        <strong>call or WhatsApp us</strong>.
       </p>
     </div>
   );

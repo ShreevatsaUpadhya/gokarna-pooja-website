@@ -1,0 +1,188 @@
+/* =========================
+   GLOBAL SAFETY FIX
+========================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+
+.pooja-detail-page {
+  width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #fff8e7, #fde2b8);
+  color: #4a3c2a;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.pooja-hero {
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+
+.pooja-hero h1 {
+  font-size: clamp(2rem, 6vw, 2.6rem);
+  color: #d35400;
+  margin-bottom: 12px;
+}
+
+.hero-subtext {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
+  line-height: 1.8;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.pooja-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.pooja-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #8b4513;
+}
+
+/* =========================
+   LIST
+========================= */
+
+.pooja-list,
+.sandhi-list,
+.sarpa-dosha-list {
+  padding-left: 18px;
+}
+
+.pooja-list li,
+.sandhi-item,
+.sarpa-dosha-item {
+  margin-bottom: 22px;
+}
+
+.pooja-list h3,
+.sandhi-item h3,
+.sarpa-dosha-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #e67e22;
+}
+
+.pooja-list p,
+.sandhi-item p,
+.sarpa-dosha-item p {
+  line-height: 1.7;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.pooja-faq {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.pooja-faq h2 {
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  border: 1px solid #e0cfa6;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  background: #fffaf0;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.arrow {
+  font-size: 1.2rem;
+}
+
+/* =========================
+   BOTTOM CTA
+========================= */
+
+.pooja-bottom-cta {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 1.05rem;
+}
+
+/* =========================
+   STICKY CONTACT BAR
+========================= */
+
+.sticky-contact-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sticky-contact-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+    background: #ffffff;
+    border-top: 1px solid #ddd;
+  }
+
+  .sticky-call,
+  .sticky-whatsapp {
+    flex: 1;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    box-sizing: border-box;
+  }
+
+  .sticky-call {
+    background: #f1c40f;
+    color: #000;
+  }
+
+  .sticky-whatsapp {
+    background: #25d366;
+    color: #fff;
+  }
+
+  .pooja-detail-page {
+    padding-bottom: 70px;
+  }
+}

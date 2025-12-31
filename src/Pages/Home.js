@@ -1,43 +1,77 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import "./Home.css";
 import heroImage from "../assets/temple-bg.jpg";
 
 function Home() {
   return (
     <div className="home">
-      {/* ✅ SEO Metadata for Home Page */}
+      {/* SEO */}
       <Helmet>
-        <title>Gokarna Pooja Services | Authentic Temple Rituals in Gokarna</title>
+        <title>
+          Book Gokarna Pooja Services | Narayana Bali & Temple Rituals
+        </title>
         <meta
           name="description"
-          content="Experience authentic Gokarna pooja services, including Narayana Bali, Pitru Dosh Nivarana, and Devatha Kaarya. Book trusted purohits for traditional temple rituals in Gokarna, Karnataka."
-        />
-        <meta
-          name="keywords"
-          content="Gokarna pooja services, Gokarna temple rituals, Narayana Bali pooja, Pitru pooja Gokarna, Gokarna purohit booking, Apara karma Gokarna, Gokarna priest services"
+          content="Book authentic pooja services in Gokarna with experienced local Vedic purohits. We arrange Narayana Bali, Pitru Pooja, Apara Karma, Rudrabhisheka and other temple rituals."
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Gokarna Pooja Services | Authentic Rituals in Gokarna" />
-        <meta
-          property="og:description"
-          content="Book Gokarna pooja services with trusted priests for Narayana Bali, Pitru Dosh Nivarana, and Devatha Kaarya rituals."
-        />
-        <meta property="og:url" content="https://gokarnapoojas.in" />
-        <meta property="og:type" content="website" />
       </Helmet>
 
-      {/* ✅ Main Hero Section */}
-      <div
+      {/* HERO */}
+      <section
         className="hero"
         style={{ "--hero-bg": `url(${heroImage})` }}
       >
-        <h1>Welcome to Gokarna Pooja Services</h1>
+        <h1>
+          Authentic Pooja Services in Gokarna – Book Experienced Vedic Purohits
+        </h1>
+
         <p>
-          We provide authentic <strong>Devatha Kaarya</strong> and <strong>Apara</strong>{" "}
-          pooja services in Gokarna. Explore our offerings and contact us for
-          bookings with trusted Vedic priests.
+          Perform sacred poojas at <strong>Gokarna Kshetra</strong> with experienced
+          local purohits. We arrange{" "}
+          <strong>
+            Narayana Bali, Pitru Pooja, Apara Karma, Rudrabhisheka
+          </strong>{" "}
+          and other temple rituals strictly as per Vedic tradition.
         </p>
+      </section>
+
+      {/* TOP POOJAS */}
+      <section className="top-poojas">
+        <h2>Top Poojas Performed in Gokarna</h2>
+
+        <div className="pooja-list">
+          <span>Narayana Bali</span>
+          <span>Pitru Pooja</span>
+          <span>Apara Karma</span>
+          <span>Rudrabhisheka</span>
+          <span>Mrityunjaya Homa</span>
+          <span>Graha Shanti</span>
+        </div>
+
+        <p className="pooja-note">
+          Call or WhatsApp to know the procedure, availability, and booking details.
+        </p>
+      </section>
+
+      {/* ✅ STICKY CALL / WHATSAPP BAR (HOME PAGE ONLY, MOBILE ONLY) */}
+      <div className="sticky-contact-bar">
+        <a href="tel:+919110893433" className="sticky-btn call">
+          <FaPhoneAlt size={16} />
+          <span>Call</span>
+        </a>
+
+        <a
+          href="https://wa.me/919110893433"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sticky-btn whatsapp"
+        >
+          <FaWhatsapp size={18} />
+          <span>WhatsApp</span>
+        </a>
       </div>
     </div>
   );
