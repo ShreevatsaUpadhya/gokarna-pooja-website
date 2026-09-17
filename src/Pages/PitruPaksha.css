@@ -1,0 +1,464 @@
+/* /* =========================
+   PAGE
+========================= */
+
+.pitru-page {
+  width: 100%;
+  overflow: hidden;
+  color: #2f241d;
+  background: #fffaf3;
+}
+
+.pitru-container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.pitru-hero {
+  min-height: 690px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(35, 24, 18, 0.20),
+      rgba(35, 24, 18, 0.42)
+    ),
+    url("../assets/pitru-paksha-hero.png");
+
+  background-repeat: no-repeat;
+
+  /* Keep the complete composition of the image */
+  background-size: cover;
+
+  /* Move the image slightly upward */
+  background-position: center 20%;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.pitru-hero-overlay {
+  width: 100%;
+  padding: 100px 0;
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.pitru-eyebrow,
+.pitru-section-label {
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.pitru-eyebrow {
+  color: #f5d79b;
+}
+
+.pitru-hero h1 {
+  max-width: 850px;
+
+  color: #fff;
+
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.1;
+
+  margin: 0 0 25px;
+
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+}
+
+.pitru-hero-text {
+  max-width: 720px;
+
+  color: #f8f3ec;
+
+  font-size: 19px;
+  line-height: 1.7;
+
+  margin-bottom: 35px;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.pitru-hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.pitru-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50px;
+  padding: 0 25px;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.pitru-btn-primary {
+  background: #8b5e34;
+  color: #fff;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+}
+
+.pitru-btn-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.pitru-btn-secondary {
+  border: 1px solid #e4c99b;
+  color: #fff;
+
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.pitru-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.pitru-section {
+  padding: 90px 0;
+}
+
+.pitru-section-label {
+  color: #8b5e34;
+}
+
+.pitru-section h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.2;
+
+  margin: 0 0 25px;
+}
+
+.pitru-section p {
+  max-width: 850px;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  color: #5c4d42;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.pitru-services-section {
+  background: #f7efe4;
+}
+
+.pitru-services-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+
+  margin-top: 45px;
+}
+
+.pitru-service-card {
+  background: #fff;
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 8px 30px rgba(60, 40, 20, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.pitru-service-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 35px rgba(60, 40, 20, 0.11);
+}
+
+.pitru-service-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.pitru-service-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 21px;
+}
+
+.pitru-service-card p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.pitru-service-card a {
+  color: #8b5e34;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.pitru-service-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   TWO COLUMN
+========================= */
+
+.pitru-two-column {
+  display: grid;
+
+  grid-template-columns: 1.4fr 0.8fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.pitru-info-box {
+  background: #f7efe4;
+
+  padding: 35px;
+
+  border-radius: 12px;
+}
+
+.pitru-info-box h3 {
+  font-size: 27px;
+  margin-top: 0;
+}
+
+.pitru-info-box .pitru-btn {
+  margin-top: 15px;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.pitru-process-section {
+  background: #f7efe4;
+}
+
+.pitru-process-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  margin-top: 45px;
+}
+
+.pitru-process-card {
+  background: #fff;
+
+  padding: 30px 24px;
+
+  border-radius: 10px;
+}
+
+.pitru-process-card span {
+  font-size: 32px;
+
+  font-weight: 800;
+
+  color: #b08a5a;
+}
+
+.pitru-process-card h3 {
+  margin: 15px 0 10px;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.pitru-faq {
+  max-width: 900px;
+
+  margin-top: 40px;
+}
+
+.pitru-faq details {
+  background: #fff;
+
+  border-bottom: 1px solid #e6d9ca;
+
+  padding: 22px 5px;
+}
+
+.pitru-faq summary {
+  cursor: pointer;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.pitru-faq p {
+  margin-top: 15px;
+
+  margin-bottom: 0;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.pitru-final-cta {
+  padding: 90px 0;
+
+  text-align: center;
+
+  background: #2f241d;
+}
+
+.pitru-final-cta .pitru-section-label {
+  color: #d8b77b;
+}
+
+.pitru-final-cta h2 {
+  color: #fff;
+}
+
+.pitru-final-cta p {
+  color: #e8ddd2;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pitru-final-cta .pitru-hero-buttons {
+  justify-content: center;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .pitru-hero {
+    min-height: 650px;
+
+    background-position: center 20%;
+  }
+
+  .pitru-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pitru-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pitru-two-column {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .pitru-hero {
+    min-height: 650px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(35, 24, 18, 0.25),
+        rgba(35, 24, 18, 0.48)
+      ),
+      url("../assets/pitru-paksha-hero.png");
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center 15%;
+  }
+
+  .pitru-hero-overlay {
+    padding: 80px 0;
+  }
+
+  .pitru-hero h1 {
+    font-size: 40px;
+  }
+
+  .pitru-hero-text {
+    font-size: 16px;
+  }
+
+  .pitru-section {
+    padding: 65px 0;
+  }
+
+  .pitru-services-grid,
+  .pitru-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pitru-btn {
+    width: 100%;
+  }
+
+  .pitru-hero-buttons {
+    width: 100%;
+  }
+
+  .pitru-info-box {
+    padding: 28px 22px;
+  }
+}

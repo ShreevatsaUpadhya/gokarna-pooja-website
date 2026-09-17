@@ -124,6 +124,10 @@
   font-weight: 700;
 }
 
+/* ===========================
+   POOJA LIST
+=========================== */
+
 .pooja-list {
   display: flex;
   flex-wrap: wrap;
@@ -133,7 +137,11 @@
   margin: 0 auto 25px;
 }
 
-.pooja-list span {
+/* Both normal items and clickable links */
+
+.pooja-list span,
+.pooja-list a {
+  display: inline-block;
   padding: 12px 22px;
   border-radius: 30px;
   background: linear-gradient(
@@ -145,12 +153,104 @@
   font-weight: 600;
   border: 1px solid rgba(241, 196, 15, 0.5);
   font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
+
+/* Hover effect for clickable poojas */
+
+.pooja-list a:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(241, 196, 15, 0.3),
+    rgba(0, 0, 0, 0.08)
+  );
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   POOJA NOTE
+=========================== */
 
 .pooja-note {
   margin-top: 10px;
   font-size: 1rem;
   color: #444;
+}
+
+/* ================================
+   PITRU PAKSHA HOME SECTION
+================================ */
+
+.pitru-paksha-home {
+  max-width: 900px;
+  margin: 50px auto 30px;
+  padding: 35px 25px;
+  text-align: center;
+  background: #f7efe4;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.pitru-paksha-home h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2c2c2c;
+}
+
+.pitru-paksha-home p {
+  line-height: 1.7;
+  margin: 0 auto 20px;
+  max-width: 750px;
+  color: #444;
+}
+
+.pitru-paksha-home-link {
+  display: inline-block;
+  font-weight: 700;
+  color: #8a5a00;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.pitru-paksha-home-link:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   POOJAS CTA
+================================ */
+
+.home-poojas-cta {
+  max-width: 900px;
+  margin: 30px auto 50px;
+  padding: 30px 25px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.home-poojas-cta h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #2c2c2c;
+}
+
+.home-poojas-cta p {
+  line-height: 1.7;
+  margin: 0 auto 20px;
+  max-width: 700px;
+  color: #444;
+}
+
+.home-poojas-link {
+  font-weight: 700;
+  color: #8a5a00;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.home-poojas-link:hover {
+  text-decoration: underline;
 }
 
 /* ===========================
@@ -162,6 +262,7 @@
     opacity: 0;
     transform: translateY(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -173,6 +274,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -198,7 +300,21 @@
     padding: 12px 16px;
     border-radius: 8px;
   }
+
+  .pitru-paksha-home {
+    margin: 35px 15px 25px;
+    padding: 30px 20px;
+  }
+
+  .home-poojas-cta {
+    margin: 25px 15px 45px;
+    padding: 25px 20px;
+  }
 }
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
 
 @media (max-width: 600px) {
   .top-poojas {
@@ -209,11 +325,27 @@
     font-size: 1.6rem;
   }
 
-  .pooja-list span {
+  .pooja-list {
+    gap: 10px 12px;
+  }
+
+  .pooja-list span,
+  .pooja-list a {
     font-size: 0.9rem;
     padding: 10px 18px;
   }
+
+  .pitru-paksha-home h2,
+  .home-poojas-cta h2 {
+    font-size: 1.4rem;
+  }
+
+  .pitru-paksha-home p,
+  .home-poojas-cta p {
+    font-size: 0.95rem;
+  }
 }
+
 /* =========================
    STICKY CONTACT BAR (HOME)
 ========================= */
@@ -257,9 +389,9 @@
     color: #fff;
   }
 
-  /* prevent content hiding behind sticky bar */
+  /* Prevent content from hiding behind sticky bar */
+
   .home {
     padding-bottom: 60px;
   }
 }
-

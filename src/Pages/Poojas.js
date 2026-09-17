@@ -9,21 +9,21 @@ function Poojas() {
       name: "Rudrabhisheka",
       category: "devatha",
       details:
-        "A powerful Vedic ritual dedicated to Lord Shiva, performed to remove negativity and bless devotees with peace and prosperity.",
+        "A traditional Vedic ritual dedicated to Lord Shiva, performed with prayers and offerings according to established practices.",
       hasDetailPage: false,
     },
     {
       name: "Navagraha Shanti",
       category: "devatha",
       details:
-        "Performed to reduce malefic planetary effects and bring harmony during important life events.",
+        "A traditional ritual associated with prayers to the Navagrahas and performed according to established practices.",
       hasDetailPage: false,
     },
     {
       name: "Maha Mrityunjaya Japa & Homa",
       category: "devatha",
       details:
-        "Protective ritual for health, longevity, and relief from chronic issues.",
+        "A traditional Shiva-related prayer and homa performed with recitation of the Maha Mrityunjaya Mantra.",
       hasDetailPage: false,
     },
     {
@@ -31,7 +31,7 @@ function Poojas() {
       slug: "sandhi-shanti",
       category: "devatha",
       details:
-        "Performed during major planetary transitions to ensure stability and peace.",
+        "A traditional Shanti ritual performed during significant transitions according to prescribed practices.",
       hasDetailPage: true,
     },
     {
@@ -39,15 +39,20 @@ function Poojas() {
       slug: "sarpa-dosha",
       category: "devatha",
       details:
-        "Removes obstacles related to marriage, career, and health caused by serpent dosha.",
+        "A traditional ritual associated with Sarpa Dosha according to Hindu religious practices.",
       hasDetailPage: true,
     },
+
+    // =========================
+    // APARA POOJAS
+    // =========================
+
     {
       name: "Narayana Bali",
       slug: "narayana-bali",
       category: "apara",
       details:
-        "Performed for ancestors who faced untimely death to bring peace and relief to the family.",
+        "A traditional ancestral ritual performed according to prescribed religious practices and rites.",
       hasDetailPage: true,
     },
     {
@@ -55,15 +60,28 @@ function Poojas() {
       slug: "tripindi-shraddha",
       category: "apara",
       details:
-        "Addresses unresolved ancestral rituals and frees trapped souls.",
+        "A traditional ancestral ritual performed as part of prescribed Shraddha practices.",
       hasDetailPage: true,
     },
     {
       name: "Pinda Pradana & Tarpana",
       category: "apara",
       details:
-        "Essential ancestral offering rituals for peace and blessings.",
+        "Traditional ancestral offering rituals performed as part of Pitru-related religious practices.",
       hasDetailPage: false,
+    },
+
+    // =========================
+    // PITRU PAKSHA
+    // =========================
+
+    {
+      name: "Pitru Paksha Pooja",
+      slug: "pitru-paksha-pooja",
+      category: "apara",
+      details:
+        "Learn about traditional Pitru-related rituals and ancestral offerings performed in Gokarna during Pitru Paksha.",
+      hasDetailPage: true,
     },
   ];
 
@@ -92,13 +110,17 @@ function Poojas() {
   const renderCards = (category) =>
     poojas
       .filter((p) => p.category === category)
-      .map((p, i) => {
+      .map((p) => {
         const CardContent = (
           <>
             <h3 className="card-title">{p.name}</h3>
+
             <p className="details-text">{p.details}</p>
+
             {p.hasDetailPage && (
-              <span className="details-indicator">View details →</span>
+              <span className="details-indicator">
+                View details →
+              </span>
             )}
           </>
         );
@@ -108,7 +130,11 @@ function Poojas() {
             key={p.name}
             to={`/${p.slug}`}
             className="card"
-            ref={(el) => cardsRef.current.push(el)}
+            ref={(el) => {
+              if (el && !cardsRef.current.includes(el)) {
+                cardsRef.current.push(el);
+              }
+            }}
           >
             {CardContent}
           </Link>
@@ -116,7 +142,11 @@ function Poojas() {
           <div
             key={p.name}
             className="card"
-            ref={(el) => cardsRef.current.push(el)}
+            ref={(el) => {
+              if (el && !cardsRef.current.includes(el)) {
+                cardsRef.current.push(el);
+              }
+            }}
           >
             {CardContent}
           </div>
@@ -125,32 +155,89 @@ function Poojas() {
 
   return (
     <div className="page-container">
+
       <Helmet>
-        <title>Gokarna Poojas & Rituals | Book Temple Poojas in Gokarna</title>
+        <title>
+          Gokarna Poojas & Rituals | Book Temple Poojas in Gokarna
+        </title>
+
         <meta
           name="description"
-          content="Explore authentic poojas performed in Gokarna including Narayana Bali, Tripindi Shraddha, Sarpa Dosha, Sandhi Shanti and other traditional rituals."
+          content="Explore traditional poojas and rituals performed in Gokarna, including Narayana Bali, Tripindi Shraddha, Pinda Pradana, Pitru Paksha rituals, Sarpa Dosha and Sandhi Shanti."
         />
-        <link rel="canonical" href="https://www.gokarnapoojas.in/poojas" />
+
+        <link
+          rel="canonical"
+          href="https://www.gokarnapoojas.in/poojas"
+        />
       </Helmet>
 
-      <h1 className="section-title">Poojas & Rituals in Gokarna</h1>
+      <h1 className="section-title">
+        Poojas & Rituals in Gokarna
+      </h1>
+
       <p className="intro-text">
-        Below are the major poojas performed in Gokarna as per traditional
-        practices.
+        Below are the major poojas and traditional rituals performed
+        in Gokarna according to established religious practices.
       </p>
 
-      <h2 className="category-title">✨ Devatha Kaarya</h2>
-      <div className="cards-grid">{renderCards("devatha")}</div>
+      {/* =========================
+          DEVATHA KAARYA
+      ========================== */}
 
-      <h2 className="category-title">🕉 Apara Poojas</h2>
-      <div className="cards-grid">{renderCards("apara")}</div>
+      <h2 className="category-title">
+        ✨ Devatha Kaarya
+      </h2>
+
+      <div className="cards-grid">
+        {renderCards("devatha")}
+      </div>
+
+      {/* =========================
+          APARA POOJAS
+      ========================== */}
+
+      <h2 className="category-title">
+        🕉 Apara Poojas
+      </h2>
+
+      <div className="cards-grid">
+        {renderCards("apara")}
+      </div>
+
+      {/* =========================
+          PITRU PAKSHA INFORMATION
+      ========================== */}
+
+      <div className="pitru-paksha-info">
+
+        <h2>
+          Pitru Paksha Pooja in Gokarna
+        </h2>
+
+        <p>
+          Planning to perform traditional Pitru-related rituals in
+          Gokarna during Pitru Paksha? Explore information about
+          Pitru Tarpana, Shraddha, Pinda Pradana and other ancestral
+          rituals.
+        </p>
+
+        <Link to="/pitru-paksha-pooja">
+          Explore Pitru Paksha Pooja →
+        </Link>
+
+      </div>
+
+      {/* =========================
+          CONTACT
+      ========================== */}
 
       <div className="contact-note">
         <p className="scroll-text">
           📞 Call or WhatsApp us for pooja booking and guidance.
         </p>
       </div>
+
     </div>
   );
 }

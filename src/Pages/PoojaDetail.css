@@ -57,6 +57,10 @@ body {
   color: #8b4513;
 }
 
+.pooja-content p {
+  line-height: 1.7;
+}
+
 /* =========================
    LIST
 ========================= */
@@ -85,6 +89,43 @@ body {
 .sandhi-item p,
 .sarpa-dosha-item p {
   line-height: 1.7;
+}
+
+/* =========================
+   RELATED PITRU PAKSHA SECTION
+========================= */
+
+.related-pooja-link {
+  margin: 45px 0 10px;
+  padding: 30px 25px;
+  text-align: center;
+  background: rgba(255, 250, 240, 0.85);
+  border: 1px solid #e0cfa6;
+  border-radius: 10px;
+}
+
+.related-pooja-link h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.related-pooja-link p {
+  max-width: 750px;
+  margin: 0 auto 20px;
+  line-height: 1.7;
+}
+
+.related-pooja-link a {
+  display: inline-block;
+  font-weight: 700;
+  color: #8b4513;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.related-pooja-link a:hover {
+  text-decoration: underline;
 }
 
 /* =========================
@@ -120,6 +161,11 @@ body {
 
 .faq-item summary::-webkit-details-marker {
   display: none;
+}
+
+.faq-item p {
+  margin-top: 12px;
+  line-height: 1.7;
 }
 
 .arrow {
@@ -184,5 +230,14 @@ body {
 
   .pooja-detail-page {
     padding-bottom: 70px;
+  }
+
+  .related-pooja-link {
+    margin: 35px 0 5px;
+    padding: 25px 18px;
+  }
+
+  .related-pooja-link h2 {
+    font-size: 1.35rem;
   }
 }

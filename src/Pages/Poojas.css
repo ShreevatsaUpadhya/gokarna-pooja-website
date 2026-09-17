@@ -184,3 +184,26 @@
     font-size: 0.85rem;
   }
 }
+.pitru-paksha-info {
+  max-width: 900px;
+  margin: 50px auto 30px;
+  padding: 30px;
+  text-align: center;
+  background: #f7efe4;
+  border-radius: 10px;
+}
+
+.pitru-paksha-info h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.pitru-paksha-info p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.pitru-paksha-info a {
+  font-weight: 700;
+  text-decoration: none;
+}
