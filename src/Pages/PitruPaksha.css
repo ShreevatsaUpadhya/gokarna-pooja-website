@@ -1,16 +1,24 @@
-/* /* =========================
+/* =========================
    PAGE
 ========================= */
 
 .pitru-page {
   width: 100%;
-  overflow: hidden;
+  max-width: 100%;
   color: #2f241d;
   background: #fffaf3;
+  overflow-x: hidden;
+}
+
+.pitru-page *,
+.pitru-page *::before,
+.pitru-page *::after {
+  box-sizing: border-box;
 }
 
 .pitru-container {
-  width: min(1120px, 92%);
+  width: 92%;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -31,16 +39,14 @@
     url("../assets/pitru-paksha-hero.png");
 
   background-repeat: no-repeat;
-
-  /* Keep the complete composition of the image */
   background-size: cover;
-
-  /* Move the image slightly upward */
   background-position: center 20%;
 
   display: flex;
   align-items: center;
+
   position: relative;
+  width: 100%;
 }
 
 .pitru-hero-overlay {
@@ -116,6 +122,8 @@
   font-weight: 700;
 
   transition: 0.25s ease;
+
+  max-width: 100%;
 }
 
 .pitru-btn-primary {
@@ -132,6 +140,7 @@
 
 .pitru-btn-secondary {
   border: 1px solid #e4c99b;
+
   color: #fff;
 
   background: rgba(0, 0, 0, 0.12);
@@ -148,6 +157,7 @@
 ========================= */
 
 .pitru-section {
+  width: 100%;
   padding: 90px 0;
 }
 
@@ -160,6 +170,8 @@
   line-height: 1.2;
 
   margin: 0 0 25px;
+
+  max-width: 100%;
 }
 
 .pitru-section p {
@@ -169,6 +181,8 @@
   line-height: 1.8;
 
   color: #5c4d42;
+
+  margin-top: 0;
 }
 
 
@@ -183,14 +197,19 @@
 .pitru-services-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   gap: 22px;
 
   margin-top: 45px;
+
+  width: 100%;
 }
 
 .pitru-service-card {
+  width: 100%;
+  min-width: 0;
+
   background: #fff;
 
   padding: 30px;
@@ -224,6 +243,8 @@
 .pitru-service-card p {
   font-size: 15px;
   line-height: 1.7;
+
+  margin-bottom: 15px;
 }
 
 .pitru-service-card a {
@@ -240,20 +261,38 @@
 
 
 /* =========================
-   TWO COLUMN
+   WHY GOKARNA
 ========================= */
 
 .pitru-two-column {
   display: grid;
 
-  grid-template-columns: 1.4fr 0.8fr;
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(300px, 0.8fr);
 
   gap: 70px;
 
   align-items: center;
+
+  width: 100%;
 }
 
+.pitru-two-column > div {
+  min-width: 0;
+  max-width: 100%;
+}
+
+
+/* =========================
+   INFO BOX
+========================= */
+
 .pitru-info-box {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
   background: #f7efe4;
 
   padding: 35px;
@@ -262,12 +301,23 @@
 }
 
 .pitru-info-box h3 {
+  margin: 0 0 15px;
+
   font-size: 27px;
-  margin-top: 0;
+  line-height: 1.25;
+}
+
+.pitru-info-box p {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  max-width: 100%;
 }
 
 .pitru-info-box .pitru-btn {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 
@@ -282,14 +332,19 @@
 .pitru-process-grid {
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
   gap: 20px;
 
   margin-top: 45px;
+
+  width: 100%;
 }
 
 .pitru-process-card {
+  width: 100%;
+  min-width: 0;
+
   background: #fff;
 
   padding: 30px 24px;
@@ -307,6 +362,16 @@
 
 .pitru-process-card h3 {
   margin: 15px 0 10px;
+
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.pitru-process-card p {
+  font-size: 15px;
+  line-height: 1.7;
+
+  margin: 0;
 }
 
 
@@ -315,12 +380,15 @@
 ========================= */
 
 .pitru-faq {
+  width: 100%;
   max-width: 900px;
 
   margin-top: 40px;
 }
 
 .pitru-faq details {
+  width: 100%;
+
   background: #fff;
 
   border-bottom: 1px solid #e6d9ca;
@@ -334,14 +402,16 @@
   font-size: 18px;
 
   font-weight: 700;
+
+  line-height: 1.5;
 }
 
 .pitru-faq p {
   margin-top: 15px;
-
   margin-bottom: 0;
 
   font-size: 16px;
+  line-height: 1.7;
 }
 
 
@@ -350,6 +420,8 @@
 ========================= */
 
 .pitru-final-cta {
+  width: 100%;
+
   padding: 90px 0;
 
   text-align: center;
@@ -390,11 +462,11 @@
   }
 
   .pitru-services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .pitru-process-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .pitru-two-column {
@@ -410,6 +482,24 @@
 ========================= */
 
 @media (max-width: 600px) {
+
+  /* -------------------------
+     CONTAINER
+  ------------------------- */
+
+  .pitru-container {
+    width: calc(100% - 32px);
+
+    max-width: none;
+
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+
+  /* -------------------------
+     HERO
+  ------------------------- */
 
   .pitru-hero {
     min-height: 650px;
@@ -430,35 +520,393 @@
   }
 
   .pitru-hero-overlay {
-    padding: 80px 0;
+    width: 100%;
+
+    padding: 70px 0;
+  }
+
+  .pitru-eyebrow {
+    font-size: 12px;
+    letter-spacing: 1.5px;
   }
 
   .pitru-hero h1 {
-    font-size: 40px;
+    font-size: 36px;
+
+    line-height: 1.12;
+
+    margin-bottom: 20px;
   }
 
   .pitru-hero-text {
     font-size: 16px;
+
+    line-height: 1.65;
+
+    margin-bottom: 28px;
   }
 
-  .pitru-section {
-    padding: 65px 0;
-  }
 
-  .pitru-services-grid,
-  .pitru-process-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pitru-btn {
-    width: 100%;
-  }
+  /* -------------------------
+     HERO BUTTONS
+  ------------------------- */
 
   .pitru-hero-buttons {
     width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
   }
 
-  .pitru-info-box {
-    padding: 28px 22px;
+  .pitru-hero-buttons .pitru-btn {
+    width: 100%;
+
+    min-height: 50px;
+
+    padding: 14px 16px;
+  }
+
+
+  /* -------------------------
+     GENERAL SECTIONS
+  ------------------------- */
+
+  .pitru-section {
+    padding: 60px 0;
+  }
+
+  .pitru-section-label {
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+  }
+
+  .pitru-section h2 {
+    font-size: 30px;
+
+    line-height: 1.22;
+
+    margin-bottom: 22px;
+  }
+
+  .pitru-section p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+
+    overflow-wrap: break-word;
+  }
+
+
+  /* -------------------------
+     SERVICES
+  ------------------------- */
+
+  .pitru-services-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    margin-top: 30px;
+  }
+
+  .pitru-service-card {
+    padding: 25px 22px;
+  }
+
+  .pitru-service-card h3 {
+    font-size: 21px;
+  }
+
+
+  /* -------------------------
+     WHY GOKARNA
+  ------------------------- */
+
+  .pitru-two-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 30px;
+
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pitru-two-column > div {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .pitru-two-column > div:first-child {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .pitru-two-column > div:first-child h2 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .pitru-two-column > div:first-child p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+
+  /* -------------------------
+     PLANNING SECTION
+     NO BACKGROUND CARD
+  ------------------------- */
+
+  .pitru-two-column > div:last-child {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+  }
+
+  .pitru-two-column > div:last-child .pitru-info-box {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    overflow: visible;
+  }
+
+
+  /* Planning heading */
+
+  .pitru-two-column > div:last-child .pitru-info-box h3 {
+    display: block !important;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 0 14px;
+
+    font-size: 27px;
+
+    line-height: 1.25;
+
+    overflow-wrap: break-word;
+  }
+
+
+  /* Planning description */
+
+  .pitru-two-column > div:last-child .pitru-info-box p {
+    display: block !important;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    overflow-wrap: break-word;
+  }
+
+
+  /* WhatsApp button */
+
+  .pitru-two-column > div:last-child .pitru-info-box .pitru-btn {
+    display: inline-flex !important;
+
+    width: auto !important;
+    max-width: 100%;
+
+    min-height: 48px;
+
+    margin-top: 20px;
+
+    padding: 13px 22px;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+  }
+
+
+  /* -------------------------
+     PROCESS
+  ------------------------- */
+
+  .pitru-process-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    margin-top: 30px;
+  }
+
+  .pitru-process-card {
+    padding: 25px 22px;
+  }
+
+  .pitru-process-card span {
+    font-size: 28px;
+  }
+
+  .pitru-process-card h3 {
+    font-size: 20px;
+  }
+
+
+  /* -------------------------
+     FAQ
+  ------------------------- */
+
+  .pitru-faq {
+    margin-top: 30px;
+  }
+
+  .pitru-faq details {
+    padding: 20px 2px;
+  }
+
+  .pitru-faq summary {
+    font-size: 17px;
+
+    line-height: 1.5;
+  }
+
+  .pitru-faq p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  /* -------------------------
+     FINAL CTA
+  ------------------------- */
+
+  .pitru-final-cta {
+    padding: 60px 0;
+  }
+
+  .pitru-final-cta h2 {
+    font-size: 30px;
+
+    line-height: 1.22;
+  }
+
+  .pitru-final-cta p {
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+  .pitru-final-cta .pitru-hero-buttons {
+    width: 100%;
+  }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+  .pitru-container {
+    width: calc(100% - 24px);
+
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .pitru-hero h1 {
+    font-size: 33px;
+  }
+
+  .pitru-hero-text {
+    font-size: 15px;
+  }
+
+  .pitru-section h2 {
+    font-size: 28px;
+  }
+
+  .pitru-two-column > div:first-child h2 {
+    font-size: 28px;
+  }
+
+  /* Planning section remains without card */
+
+  .pitru-two-column > div:last-child .pitru-info-box {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+  }
+
+  .pitru-two-column > div:last-child .pitru-info-box h3 {
+    font-size: 26px;
+  }
+
+  .pitru-two-column > div:last-child .pitru-info-box p {
+    font-size: 15px;
+  }
+
+  .pitru-two-column > div:last-child .pitru-info-box .pitru-btn {
+    font-size: 14px;
   }
 }
