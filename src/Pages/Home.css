@@ -4,16 +4,22 @@
 
 .hero {
   min-height: 100vh;
+
   background: var(--hero-bg) no-repeat center center / cover;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   text-align: center;
   color: white;
+
   padding: 0 20px;
+
   position: relative;
 }
+
 
 /* ===========================
    OVERLAY
@@ -21,11 +27,15 @@
 
 .hero::before {
   content: "";
+
   position: absolute;
   inset: 0;
+
   background: rgba(0, 0, 0, 0.45);
+
   z-index: 0;
 }
+
 
 /* ===========================
    HEADLINE
@@ -33,15 +43,23 @@
 
 .hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.5rem);
+
   margin-bottom: 1rem;
+
   font-weight: 700;
+
   letter-spacing: 1px;
+
   color: #f1c40f;
+
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+
   position: relative;
   z-index: 1;
+
   animation: fadeInDown 1.5s ease both;
 }
+
 
 /* ===========================
    DESCRIPTION
@@ -49,16 +67,25 @@
 
 .hero p {
   font-size: clamp(1rem, 2.5vw, 1.3rem);
+
   max-width: 720px;
+
   line-height: 1.6;
+
   color: #f8f9fa;
+
   background: rgba(0, 0, 0, 0.35);
+
   padding: 14px 22px;
+
   border-radius: 10px;
+
   position: relative;
   z-index: 1;
+
   animation: fadeInUp 1.8s ease both;
 }
+
 
 /* ===========================
    HERO ACTION BUTTONS
@@ -66,46 +93,65 @@
 
 .hero-actions {
   display: flex;
+
   gap: 16px;
+
   margin-top: 25px;
+
   z-index: 1;
+
   flex-wrap: wrap;
+
   justify-content: center;
 }
 
 .call-btn,
 .whatsapp-btn {
   text-decoration: none;
+
   padding: 14px 22px;
+
   font-size: 1rem;
+
   font-weight: 600;
+
   border-radius: 30px;
+
   transition: all 0.3s ease;
+
   min-width: 220px;
+
   text-align: center;
 }
 
 .call-btn {
   background: #f1c40f;
+
   color: #000;
+
   box-shadow: 0 6px 15px rgba(241, 196, 15, 0.4);
 }
 
 .call-btn:hover {
   background: #ffdd33;
+
   transform: translateY(-2px);
 }
 
 .whatsapp-btn {
   background: #25d366;
+
   color: #fff;
+
   box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
 }
 
 .whatsapp-btn:hover {
   background: #1ebe5d;
+
   transform: translateY(-2px);
 }
+
 
 /* ===========================
    TOP POOJAS SECTION
@@ -113,16 +159,22 @@
 
 .top-poojas {
   background: #fff;
+
   padding: 60px 20px;
+
   text-align: center;
 }
 
 .top-poojas h2 {
   font-size: 2rem;
+
   margin-bottom: 30px;
+
   color: #2c2c2c;
+
   font-weight: 700;
 }
+
 
 /* ===========================
    POOJA LIST
@@ -130,32 +182,48 @@
 
 .pooja-list {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 14px 18px;
+
   justify-content: center;
+
   max-width: 900px;
+
   margin: 0 auto 25px;
 }
+
 
 /* Both normal items and clickable links */
 
 .pooja-list span,
 .pooja-list a {
   display: inline-block;
+
   padding: 12px 22px;
+
   border-radius: 30px;
+
   background: linear-gradient(
     135deg,
     rgba(241, 196, 15, 0.15),
     rgba(0, 0, 0, 0.05)
   );
+
   color: #333;
+
   font-weight: 600;
+
   border: 1px solid rgba(241, 196, 15, 0.5);
+
   font-size: 0.95rem;
+
   text-decoration: none;
+
   transition: all 0.3s ease;
 }
+
 
 /* Hover effect for clickable poojas */
 
@@ -165,8 +233,10 @@
     rgba(241, 196, 15, 0.3),
     rgba(0, 0, 0, 0.08)
   );
+
   transform: translateY(-2px);
 }
+
 
 /* ===========================
    POOJA NOTE
@@ -174,9 +244,115 @@
 
 .pooja-note {
   margin-top: 10px;
+
   font-size: 1rem;
+
   color: #444;
 }
+
+
+/* ================================
+   ONLINE POOJA SERVICES
+================================ */
+
+.online-pooja-section {
+  width: 100%;
+
+  padding: 60px 20px;
+
+  background: #fffaf3;
+
+  box-sizing: border-box;
+}
+
+.online-pooja-content {
+  width: min(900px, 100%);
+
+  margin: 0 auto;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  border: 1px solid #eadbc8;
+
+  border-radius: 12px;
+
+  background: #f7efe4;
+
+  box-sizing: border-box;
+}
+
+.online-pooja-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #8b5e34;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.online-pooja-content h2 {
+  margin: 0 0 15px;
+
+  color: #2f241d;
+
+  font-size: 32px;
+
+  line-height: 1.25;
+}
+
+.online-pooja-content p {
+  width: 100%;
+
+  max-width: 650px;
+
+  margin: 0 auto 25px;
+
+  color: #5c4d42;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.online-pooja-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 0 24px;
+
+  border-radius: 6px;
+
+  background: #8b5e34;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.25s ease;
+
+  box-sizing: border-box;
+}
+
+.online-pooja-btn:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.92;
+}
+
 
 /* ================================
    PITRU PAKSHA HOME SECTION
@@ -184,32 +360,47 @@
 
 .pitru-paksha-home {
   max-width: 900px;
+
   margin: 50px auto 30px;
+
   padding: 35px 25px;
+
   text-align: center;
+
   background: #f7efe4;
+
   border-radius: 10px;
+
   box-sizing: border-box;
 }
 
 .pitru-paksha-home h2 {
   margin-top: 0;
+
   margin-bottom: 15px;
+
   color: #2c2c2c;
 }
 
 .pitru-paksha-home p {
   line-height: 1.7;
+
   margin: 0 auto 20px;
+
   max-width: 750px;
+
   color: #444;
 }
 
 .pitru-paksha-home-link {
   display: inline-block;
+
   font-weight: 700;
+
   color: #8a5a00;
+
   text-decoration: none;
+
   transition: all 0.3s ease;
 }
 
@@ -217,41 +408,55 @@
   text-decoration: underline;
 }
 
+
 /* ================================
    POOJAS CTA
 ================================ */
 
 .home-poojas-cta {
   max-width: 900px;
+
   margin: 30px auto 50px;
+
   padding: 30px 25px;
+
   text-align: center;
+
   box-sizing: border-box;
 }
 
 .home-poojas-cta h2 {
   margin-top: 0;
+
   margin-bottom: 12px;
+
   color: #2c2c2c;
 }
 
 .home-poojas-cta p {
   line-height: 1.7;
+
   margin: 0 auto 20px;
+
   max-width: 700px;
+
   color: #444;
 }
 
 .home-poojas-link {
   font-weight: 700;
+
   color: #8a5a00;
+
   text-decoration: none;
+
   transition: all 0.3s ease;
 }
 
 .home-poojas-link:hover {
   text-decoration: underline;
 }
+
 
 /* ===========================
    ANIMATIONS
@@ -260,11 +465,13 @@
 @keyframes fadeInDown {
   from {
     opacity: 0;
+
     transform: translateY(-30px);
   }
 
   to {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
@@ -272,20 +479,24 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
+
     transform: translateY(30px);
   }
 
   to {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
 
+
 /* ===========================
-   MOBILE
+   TABLET / MOBILE
 =========================== */
 
 @media (max-width: 768px) {
+
   .hero {
     padding: 0 15px;
   }
@@ -293,30 +504,75 @@
   .call-btn,
   .whatsapp-btn {
     width: 100%;
+
     max-width: 280px;
   }
 
   .hero p {
     padding: 12px 16px;
+
     border-radius: 8px;
   }
 
   .pitru-paksha-home {
     margin: 35px 15px 25px;
+
     padding: 30px 20px;
   }
 
   .home-poojas-cta {
     margin: 25px 15px 45px;
+
     padding: 25px 20px;
   }
+
+
+  /* -------------------------
+     ONLINE POOJA
+  ------------------------- */
+
+  .online-pooja-section {
+    padding: 45px 16px;
+  }
+
+  .online-pooja-content {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 30px 20px;
+  }
+
+  .online-pooja-content h2 {
+    font-size: 28px;
+  }
+
+  .online-pooja-content p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .online-pooja-btn {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-height: 50px;
+
+    padding: 13px 16px;
+
+    white-space: normal;
+  }
 }
+
 
 /* ===========================
    SMALL MOBILE
 =========================== */
 
 @media (max-width: 600px) {
+
   .top-poojas {
     padding: 45px 15px;
   }
@@ -332,6 +588,7 @@
   .pooja-list span,
   .pooja-list a {
     font-size: 0.9rem;
+
     padding: 10px 18px;
   }
 
@@ -344,48 +601,103 @@
   .home-poojas-cta p {
     font-size: 0.95rem;
   }
+
+
+  /* -------------------------
+     ONLINE POOJA
+  ------------------------- */
+
+  .online-pooja-section {
+    padding: 40px 15px;
+  }
+
+  .online-pooja-content {
+    padding: 28px 18px;
+  }
+
+  .online-pooja-label {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .online-pooja-content h2 {
+    font-size: 27px;
+
+    line-height: 1.25;
+  }
+
+  .online-pooja-content p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .online-pooja-btn {
+    font-size: 15px;
+  }
 }
 
-/* =========================
+
+/* ===========================
    STICKY CONTACT BAR (HOME)
-========================= */
+=========================== */
 
 .sticky-contact-bar {
   display: none;
 }
 
 @media (max-width: 768px) {
+
   .sticky-contact-bar {
     position: fixed;
+
     bottom: 0;
+
     left: 0;
+
     width: 100%;
+
     display: flex;
+
     z-index: 999;
+
     background: #ffffff;
+
     border-top: 1px solid #ddd;
   }
 
   .sticky-btn {
     flex: 1;
+
     padding: 14px 0;
+
     text-align: center;
+
     font-size: 15px;
+
     font-weight: 600;
+
     text-decoration: none;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     gap: 6px;
   }
 
   .sticky-btn.call {
     background: #f1c40f;
+
     color: #000;
   }
 
   .sticky-btn.whatsapp {
     background: #25d366;
+
     color: #fff;
   }
 

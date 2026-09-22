@@ -376,6 +376,61 @@
 
 
 /* =========================
+   ONLINE POOJA
+========================= */
+
+.online-pooja-pitru {
+  width: 100%;
+  background: #fffaf3;
+}
+
+.online-pooja-pitru-content {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  padding: 45px 30px;
+
+  text-align: center;
+
+  background: #f7efe4;
+
+  border: 1px solid #eadbc8;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+.online-pooja-pitru-content .pitru-section-label {
+  margin-bottom: 12px;
+}
+
+.online-pooja-pitru-content h2 {
+  margin: 0 0 15px;
+
+  font-size: 36px;
+  line-height: 1.25;
+}
+
+.online-pooja-pitru-content p {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 0 auto 25px;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #5c4d42;
+}
+
+.online-pooja-pitru-content .pitru-btn {
+  margin-top: 5px;
+}
+
+
+/* =========================
    FAQ
 ========================= */
 
@@ -802,6 +857,55 @@
 
 
   /* -------------------------
+     ONLINE POOJA
+  ------------------------- */
+
+  .online-pooja-pitru {
+    padding: 45px 0;
+  }
+
+  .online-pooja-pitru-content {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 30px 20px;
+
+    margin: 0 auto;
+  }
+
+  .online-pooja-pitru-content h2 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 28px;
+    line-height: 1.25;
+
+    overflow-wrap: break-word;
+  }
+
+  .online-pooja-pitru-content p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    overflow-wrap: break-word;
+  }
+
+  .online-pooja-pitru-content .pitru-btn {
+    width: 100%;
+    max-width: 100%;
+
+    min-height: 50px;
+
+    padding: 13px 16px;
+
+    white-space: normal;
+  }
+
+
+  /* -------------------------
      FAQ
   ------------------------- */
 
@@ -881,6 +985,7 @@
     font-size: 28px;
   }
 
+
   /* Planning section remains without card */
 
   .pitru-two-column > div:last-child .pitru-info-box {
@@ -907,6 +1012,27 @@
   }
 
   .pitru-two-column > div:last-child .pitru-info-box .pitru-btn {
+    font-size: 14px;
+  }
+
+
+  /* -------------------------
+     ONLINE POOJA
+  ------------------------- */
+
+  .online-pooja-pitru-content {
+    padding: 28px 16px;
+  }
+
+  .online-pooja-pitru-content h2 {
+    font-size: 26px;
+  }
+
+  .online-pooja-pitru-content p {
+    font-size: 15px;
+  }
+
+  .online-pooja-pitru-content .pitru-btn {
     font-size: 14px;
   }
 }
