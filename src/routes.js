@@ -6,6 +6,7 @@ import SarpaDoshaPage from "./Pages/SarpaDoshaPage";
 import NarayanaBali from "./Pages/NarayanaBali";
 import TripindiShraddha from "./Pages/TripindiShraddha";
 import PitruPaksha from "./Pages/PitruPaksha";
+import OurLegacy from "./Pages/OurLegacy";
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -19,6 +20,7 @@ const routes = [
   { path: "/sarpa-dosha", element: <SarpaDoshaPage /> },
   { path: "/pitru-paksha-pooja",
   element: <PitruPaksha /> },
+ { path: "/our-legacy", element:<OurLegacy />},
 ];
 
 export default routes;

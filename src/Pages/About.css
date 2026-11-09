@@ -1,3 +1,4 @@
+
 .about-page {
   min-height: 100vh;
   padding: 60px 20px;
@@ -22,6 +23,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  line-height: 1.2;
   animation: fadeInText 1.2s ease-in-out both;
 }
 
@@ -55,7 +57,92 @@
 }
 
 /* ===========================
-   CTA LINE
+   FAMILY HERITAGE SECTION
+=========================== */
+
+.about-legacy {
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  margin: 20px auto 10px;
+  padding: 32px 35px;
+  background: linear-gradient(135deg, #fffaf1, #ffffff);
+  border: 1px solid #eee1cb;
+  border-radius: 12px;
+}
+
+.about-legacy-label {
+  display: inline-block;
+  color: #94652b;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  margin-bottom: 10px;
+}
+
+.about-legacy h2 {
+  margin: 5px auto 18px;
+  color: #633d20;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.35;
+}
+
+.about-legacy p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  margin: 15px auto;
+}
+
+/* ===========================
+   EXPLORE LEGACY LINK
+=========================== */
+
+.about-legacy-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px auto 5px;
+  padding: 12px 24px;
+  border: 1px solid #c59d5f;
+  border-radius: 6px;
+  background: #fffaf1;
+  color: #8a642f;
+  font-size: 1.02rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-legacy-link span {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.about-legacy-link:hover {
+  background: #c59d5f;
+  border-color: #c59d5f;
+  color: #ffffff;
+  box-shadow: 0 5px 14px rgba(140, 100, 47, 0.18);
+  transform: translateY(-2px);
+}
+
+.about-legacy-link:hover span {
+  transform: translateX(4px);
+}
+
+.about-legacy-link:focus-visible {
+  outline: 2px solid #8a642f;
+  outline-offset: 4px;
+}
+
+/* ===========================
+   CONTACT CTA
 =========================== */
 
 .about-cta {
@@ -74,6 +161,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -85,6 +173,7 @@
     opacity: 0;
     transform: scaleX(0.6);
   }
+
   to {
     opacity: 1;
     transform: scaleX(1);
@@ -108,6 +197,14 @@
     font-size: 1.1rem;
     max-width: 600px;
   }
+
+  .about-legacy {
+    padding: 28px 24px;
+  }
+
+  .about-legacy p {
+    font-size: 1.05rem;
+  }
 }
 
 /* ===========================
@@ -116,7 +213,7 @@
 
 @media (max-width: 480px) {
   .about-page {
-    padding: 30px 10px;
+    padding: 30px 15px;
   }
 
   .about-page h1 {
@@ -134,5 +231,50 @@
     line-height: 1.6;
     max-width: 100%;
     margin: 15px auto;
+  }
+
+  .about-legacy {
+    margin-top: 18px;
+    padding: 24px 18px;
+    border-radius: 9px;
+  }
+
+  .about-legacy-label {
+    font-size: 0.75rem;
+    letter-spacing: 1.4px;
+  }
+
+  .about-legacy h2 {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+  }
+
+  .about-legacy p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .about-legacy-link {
+    gap: 8px;
+    padding: 11px 17px;
+    font-size: 0.95rem;
+  }
+
+  .about-cta {
+    margin-top: 22px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page h1,
+  .divider {
+    animation: none;
+  }
+
+  .about-legacy-link,
+  .about-legacy-link span {
+    transition: none;
   }
 }

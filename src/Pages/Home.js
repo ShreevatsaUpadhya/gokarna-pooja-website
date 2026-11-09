@@ -196,7 +196,7 @@ function Home() {
 
       {/* ================= PITRU PAKSHA CAMPAIGN ================= */}
 
-      <section className="pitru-paksha-home">
+      {/* <section className="pitru-paksha-home">
 
         <h2>
           Pitru Paksha Pooja in Gokarna
@@ -218,7 +218,29 @@ function Home() {
           Explore Pitru Paksha Pooja →
         </Link>
 
-      </section>
+      </section> */}
+
+      <section className="pitru-paksha-home">
+  <h2>
+    Pitru Pooja & Ancestral Rituals in Gokarna
+  </h2>
+
+  <p>
+    Gokarna is a revered pilgrimage destination for traditional
+    ancestral rituals. Learn about Pitru-related ceremonies,
+    including <strong>
+      Pitru Tarpana, Shraddha and Pinda Pradana
+    </strong>,
+    and get guidance on the rituals and arrangements for your visit.
+  </p>
+
+  <Link
+    to="/pitru-paksha-pooja"
+    className="pitru-paksha-home-link"
+  >
+    Explore Pitru Pooja & Rituals →
+  </Link>
+</section>
 
 
       {/* ================= POOJAS CTA ================= */}
